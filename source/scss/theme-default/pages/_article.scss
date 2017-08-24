@@ -388,8 +388,7 @@
                     }
                 }
             }
-        }
-        // related inline story
+        } // related inline story
         .related-inline-story {
             margin-bottom: 10px;
             background-color: #f7f7f7;
@@ -435,10 +434,11 @@
 }
 
 
+
 /* comment zone */
 
 .article-comments {
-    > header {
+    >header {
         .fa {
             margin-right: 10px;
         }
@@ -565,6 +565,7 @@
     h4 {
         margin-bottom: 10px;
         font-weight: bold;
+        color: $brand-primary;
     }
     ul {
         margin-bottom: 15px;
@@ -575,9 +576,22 @@
             margin-bottom: 0;
         }
     }
-    .story {
-        &:last-child {
-            margin-bottom: 15px;
+    .main-article>header & {
+        padding: 10px;
+        background: #f0f0f0;
+        ul {
+            margin-bottom: 0px;
+        }
+        li {
+            position: relative;
+            padding-left: 15px;
+            &::before {
+                content: '●';
+                display: inline-block;
+                position: absolute;
+                top: -1px;
+                left: 0;
+            }
         }
     }
 }
